@@ -15,8 +15,8 @@ class RetrospectiveActivity : AppCompatActivity() {
         viewPager.adapter = RetrospectiveFragmentPagerAdapter(supportFragmentManager, tabLayout)
         tabLayout.setupWithViewPager(viewPager)
 
-        tabLayout.getTabAt(0)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_person)
-        tabLayout.getTabAt(1)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_person)
+        tabLayout.getTabAt(0)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_good)
+        tabLayout.getTabAt(1)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_improve)
 
     }
 }
