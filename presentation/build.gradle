@@ -26,8 +26,10 @@ android {
 
 dependencies {
     implementation presentationDependencies.kotlin_std_lib
-    implementation presentationDependencies.app_compat
+    implementation presentationDependencies.appcompat
     implementation presentationDependencies.constraint_layout
+    implementation presentationDependencies.recyclerview
+
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.expresso_core
     androidTestImplementation testDependencies.test_runner

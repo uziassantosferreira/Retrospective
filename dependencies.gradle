@@ -3,10 +3,10 @@ ext {
             versionCode  : 1,
             versionName  : "1.0",
             applicationId: "com.uziassantosferreira.retrospective",
-            buildTools: "27.0.3",
-            minSdk    : 21,
-            targetSdk : 28,
-            compileSdk: 28
+            buildTools   : "27.0.3",
+            minSdk       : 21,
+            targetSdk    : 28,
+            compileSdk   : 28
     ]
 
     supportVersion = '28.0.0-beta01'
@@ -21,15 +21,16 @@ ext {
 
     presentationDependencies = [
 
-            kotlin_std_lib           : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion",
+            kotlin_std_lib   : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion",
 
-            app_compat               : "com.android.support:appcompat-v7:$supportVersion",
-            constraint_layout        : "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+            appcompat       : "com.android.support:appcompat-v7:$supportVersion",
+            recyclerview     : "com.android.support:recyclerview-v7:$supportVersion",
+            constraint_layout: "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     ]
 
     presentationtestDependencies = [
-            junit         : "junit:junit:$junitVersion",
-            expresso_core : "com.android.support.test.espresso:espresso-core:$espressoVersion",
-            test_runner   : "com.android.support.test:runner:$testRunner"
+            junit        : "junit:junit:$junitVersion",
+            expresso_core: "com.android.support.test.espresso:espresso-core:$espressoVersion",
+            test_runner  : "com.android.support.test:runner:$testRunner"
     ]
 }
