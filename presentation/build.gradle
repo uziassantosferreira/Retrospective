@@ -29,6 +29,7 @@ dependencies {
     implementation presentationDependencies.appcompat
     implementation presentationDependencies.constraint_layout
     implementation presentationDependencies.recyclerview
+    implementation presentationDependencies.design
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.expresso_core

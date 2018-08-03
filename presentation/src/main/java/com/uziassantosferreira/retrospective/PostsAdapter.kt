@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class RetrospectiveAdapter(private val context: Context): RecyclerView.Adapter<RetrospectiveAdapter.ViewHolder>() {
+class PostsAdapter(private val context: Context): RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder  =
-            ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_retrospective_item, parent, false))
+            ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_post_item, parent, false))
 
     override fun getItemCount(): Int = 30
 
