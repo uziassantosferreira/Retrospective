@@ -1,17 +1,19 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
+HashMap<String, String> presentationDependencies = rootProject.ext.presentationDependencies
+HashMap<String, String> testDependencies = rootProject.ext.presentationtestDependencies
+HashMap<String, String> defaultConfigApplicationAndroid = rootProject.ext.defaultConfigApplicationAndroid
+
 android {
-    compileSdkVersion 28
+    compileSdkVersion defaultConfigApplicationAndroid.compileSdk
     defaultConfig {
-        applicationId "com.uziassantosferreira.retrospective"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        applicationId defaultConfigApplicationAndroid.applicationId
+        minSdkVersion defaultConfigApplicationAndroid.minSdk
+        targetSdkVersion defaultConfigApplicationAndroid.targetSdk
+        versionCode versionCode
+        versionName versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -23,11 +25,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation presentationDependencies.kotlin_std_lib
+    implementation presentationDependencies.app_compat
+    implementation presentationDependencies.constraint_layout
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.expresso_core
+    androidTestImplementation testDependencies.test_runner
 }
