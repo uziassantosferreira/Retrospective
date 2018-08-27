@@ -29,6 +29,11 @@ ext {
             constraint_layout: "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     ]
 
+    domainDependencies = [
+
+            kotlin_std_lib   : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    ]
+
     presentationtestDependencies = [
             junit        : "junit:junit:$junitVersion",
             expresso_core: "com.android.support.test.espresso:espresso-core:$espressoVersion",
